@@ -1,0 +1,37 @@
+#spring.datasource.url: jdbc:h2:file:./camunda-h2-database
+
+camunda.bpm.admin-user:
+  id: admin
+  password: admin
+
+#camunda:
+#  bpm:
+#    database:
+#      schema-update: false
+#      schema-name: DEMO
+#      table-prefix: DEMO.
+
+spring:
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+  datasource:
+#    h2 Data Data Base config
+    driver-class-name: org.h2.Driver
+    username: sa
+    url: jdbc:h2:file:~/demo
+    password: ''
+  h2:
+    console:
+      enabled: 'true'
+      path: /h2
+
+#    oracle  Data Base config
+
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    username: demo
+#    url: jdbc:oracle:thin:@localhost:1521:xe
+#    password: demo123
+
